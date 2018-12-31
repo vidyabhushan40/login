@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Login Test Suite]">
+  <listeners>
+    <listener class-name="org.loginradius.com.listeners.TestListener"/>
+    <listener class-name="org.loginradius.com.listeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="org.loginradius.com.classes.tests.SimpleLogin">
+        <methods>
+          <include name="setup"/>
+          <include name="simple_Login_With_BothValid_Credential"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- org.loginradius.com.classes.tests.SimpleLogin -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Login Test Suite] -->

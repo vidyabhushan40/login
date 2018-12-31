@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="This is Login test for all social login options" >
+    <listeners>
+        <listener class-name="org.loginradius.com.listeners.TestListener"/>
+        <listener class-name="org.loginradius.com.listeners.AnnotationTransformer"/>
+    </listeners>
+    
+   <test  verbose="2"  name="Simple user login">
+   <classes>
+   <class name="org.loginradius.com.classes.tests.SimpleLogin">
+   <methods>
+   <include name="simple_Login_With_BothValid_Credential" />
+        <include name="simple_Login_WithBoth_Invalid_Credentials" />
+        <include name="simple_Login_withInvalid_EmailId_And_Correct_Password" />
+        <include name="simple_Login_withValid_EmailId_And_Invalid_Password" />
+        <include name="simple_Login_withBlank_EmailId_And_valid_Password" />
+        <include name="simple_Login_withValid_EmailId_And_blank_Password" />
+        <include name="simple_Login_withBlank_EmailId_And_blank_Password" />
+   </methods>
+   </class>
+   </classes>
+   </test>
+   
+   <test name="Login with google acccount">
+   <classes>
+   <class name="org.loginradius.com.classes.tests.GoogleLogin">
+   <methods>
+   <include name="google_loginWith_bothValid_credentials"/>
+        <include name="google_loginWith_bothInvalid_credentials"/>
+        <include name="google_loginWith_validUsername_and_invalidPassword"/>
+        <include name="google_loginWith_invalidUsername_and_validPassword"/>
+        <include name="google_loginWith_blankEmailId_and_validPassword"/>
+        <include name="google_loginWith_validEmailId_and_blankPassword"/>
+   </methods>
+   </class>
+   </classes>
+   </test>
+   
+   <test name="Login with Facebook, twitter and forgot password">
+   <classes>
+    <class name="org.loginradius.com.classes.tests.TwitterLogin"/>
+    <class name="org.loginradius.com.classes.tests.ForgotPassword"/> 
+   <class name="org.loginradius.com.classes.tests.FacebookLogin">
+   <methods>
+   <include name="facebookLogin_with_bothValid_credentials"/>
+        <include name="facebookLogin_with_bothInValid_credentials"/>
+        <include name="facebookLogin_with_ValidEmail_and_invalidPassword"/>
+        <include name="facebookLogin_with_inValidEmail_and_validPassword"/>
+        <include name="facebookLogin_with_blankEmailId_and_ValidPassword"/>
+        <include name="facebookLogin_with_blankEmailId_and_blankPassword"/>
+   </methods>
+   </class>
+   </classes>
+   </test>
+   
+  
+ 
+    </suite>
+    
+    
+  
