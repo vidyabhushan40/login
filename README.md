@@ -1,3 +1,1 @@
-# ExtentReportsExample
-ExtentReports 2.41.2 Example with TestNG Listeners and Retry Analyzer
-Article Link: https://www.swtestacademy.com/extentreports-testng/
+This is a demo project for all login scenario using simple, gmail, facebook , twitter, linkedin and others. This project contain all positive and negative scenarios.
